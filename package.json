@@ -1,0 +1,18 @@
+{
+  "name": "BackboneBrowserifyReact",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "",
+    "underscore": "",
+    "backbone": "",
+    "react": ""
+  },
+  "devDependencies": {
+    "reactify": ""
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
