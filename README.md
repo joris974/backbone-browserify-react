@@ -1,9 +1,25 @@
 ## Backbone Browserify React sample application ##
 
-Sample application using Backbone, Browserify, and React.
+Sample application using:
+- Backbone Model / Collection
+- Backbone Router
+- React
+- Browserify
 
-### Running the app ###
+## Installation
 
-1. npm install
-2. browserify app.js -o bundle.js
-3. Open index.html
+```sh
+$ npm install
+```
+
+```sh
+$ npm run build
+```
+## Developpement
+
+```sh
+$ npm run watch
+```
+
+
+Open `index.html`
