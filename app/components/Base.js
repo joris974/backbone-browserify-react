@@ -1,6 +1,6 @@
-var React = require('react')
+import React from 'react'
 
-var Base = React.createClass({
+const Base = React.createClass({
   displayName: "Base",
 
   render: function () {
@@ -12,4 +12,4 @@ var Base = React.createClass({
   }
 })
 
-module.exports = Base
+export default Base

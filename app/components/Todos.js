@@ -1,4 +1,4 @@
-var React = require('react')
+import React from 'react'
 
 var Todos = React.createClass({
   displayName: "Todos",
@@ -6,10 +6,10 @@ var Todos = React.createClass({
   render: function () {
     return (
       <div>
-        Todos
+        <h1>Todos</h1>
       </div>
     )
   }
 })
 
-module.exports = Todos
+export default Todos

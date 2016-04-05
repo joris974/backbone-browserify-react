@@ -1,4 +1,4 @@
-var React = require('react')
+import React from 'react'
 
 var Todo = React.createClass({
   displayName: "Todo",
@@ -12,4 +12,4 @@ var Todo = React.createClass({
   }
 })
 
-module.exports = Todo
+export default Todo
