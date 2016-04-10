@@ -1,15 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router'
 
-const Base = React.createClass({
-  displayName: "Base",
+export default class Base extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-  render: function () {
+  render() {
     return (
       <div>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         {this.props.children}
       </div>
     )
   }
-})
-
-export default Base
+}

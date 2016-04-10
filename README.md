@@ -1,8 +1,7 @@
 ## Backbone Browserify React sample application ##
 
 Sample application using:
-- Backbone Model / Collection
-- Backbone Router
+- React Router
 - React
 - Browserify
 
@@ -22,4 +21,4 @@ $ npm run watch
 ```
 
 
-Open `index.html`
+Open `dist/index.html`

@@ -1,8 +1,19 @@
-import $ from 'jquery'
-import Backbone from 'backbone'
-Backbone.$ = $;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { hashHistory, Router, Route, IndexRoute } from 'react-router'
 
-import Router from './routers/router'
-const router = new Router()
+// Components
+import BaseComponent from './components/Base.js'
+import HomeComponent from './components/Home'
+import AboutComponent from './components/About'
+import NotFoundComponent from './components/Home'
 
-Backbone.history.start()
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={BaseComponent}>
+      <IndexRoute component={HomeComponent} />
+      <Route path="about" component={AboutComponent}/>
+      <Route path="*" component={NotFoundComponent}/>
+    </Route>
+  </Router>
+), document.getElementById('main-container'))

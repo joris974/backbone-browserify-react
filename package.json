@@ -2,22 +2,31 @@
   "name": "BackboneBrowserifyReact",
   "version": "0.0.1",
   "dependencies": {
-    "backbone": "",
-    "jquery": "",
-    "react": "",
-    "react-dom": "^0.14.8",
-    "underscore": ""
+    "lodash": "^4.9.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-router": "^2.0.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
+    "parallelshell": "^2.0.0",
     "watch": "^0.17.1"
   },
   "scripts": {
-    "build": "browserify app/app.js -o target/bundle.js",
-    "build:watch": "watch 'npm run build' app/",
-    "watch": "npm run build:watch"
+    "clean": "rm -rf dist/*",
+    "prebuild": "npm run clean",
+    "build": "npm run build:js && npm run build:css && npm run build:img && npm run build:index",
+    "build:js": "browserify app/app.js -o dist/bundle.js",
+    "build:css": "cp -r css/ dist/",
+    "build:img": "cp -r img/ dist/",
+    "build:index": "cp index.html dist/",
+    "watch:js": "watch 'npm run build:js' app/",
+    "watch:css": "watch 'npm run build:css' css/",
+    "watch:img": "watch 'npm run build:img' img/",
+    "watch": "parallelshell 'npm run watch:js' 'npm run watch:css' 'npm run watch:img' 'npm run build:index'"
   },
   "browserify": {
     "transform": [
